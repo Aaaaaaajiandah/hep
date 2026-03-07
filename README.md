@@ -1,6 +1,6 @@
 # hep
 
-version control. 84 commands. competing with bro (1 command).
+version control. 92 commands. competing with bro (1 command).
 
 build: `gcc -Isrc -Isrc/core src/*.c src/core/*.c -lz -o hep`
 requires: `zlib` (`apt install zlib1g-dev`)
@@ -131,6 +131,19 @@ run `hep bios` for full command listing.
 | `hep mansion dock [file]` | pull specific large file version | `git lfs pull` |
 | `hep mansion light` | show mansion vs normal file status | `git lfs ls-files` |
 | `hep mansion send` | push large file bytes to remote | `git lfs push` |
+
+## wave 8 — networking / collaboration
+
+| command | does | git equiv |
+|---|---|---|
+| `hep ethernet` | auto-generate changelog from wave messages grouped by month | — |
+| `hep fiber <date>` | show all commits since a date (e.g. `2025-01-01` or `"7 days ago"`) | `git log --since` |
+| `hep switch <br1> <br2>` | show exactly what diverged between two branches | `git log br1..br2` |
+| `hep packet [hash]` | show one commit as a full detailed report with file sizes | `git show` |
+| `hep ping <author>` | show all commits by a specific author | `git log --author` |
+| `hep bandwidth` | show which files change most frequently, bar chart | — |
+| `hep latency` | avg/min/max time between commits, activity by hour | — |
+| `hep bridge [file.md]` | export repo summary as shareable markdown report | — |
 
 ---
 
